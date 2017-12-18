@@ -1,0 +1,9 @@
+#phone {
+  margin: 0 0 5vh;
+  background-color: black;
+  width: 400px;
+  height: 600px;
+  border-radius: 8%;
+  border: 2px solid silver;
+  transform: perspective(400px) rotateX(15deg);
+}
