@@ -1,1 +1,1 @@
-import * as actions from './action-const';
+import * as actions from 'actions/action-const';
