@@ -6,16 +6,8 @@ $imagePath: '/page/components/phone/wallpaper.jpg';
   padding: 10px; 
   border-radius: 11%;
   border: 4px solid silver;
-  transform: perspective(400px) rotateX(12deg);
+  transform: perspective(400px) rotateX(10deg);
   position: relative;
-
-  &-inner {
-    width: 400px;
-    height: 600px;
-    border-radius: 8%;
-    background-image: url($imagePath);
-    background-size: 100%; 
-  }
 
   &-notch {
     background-color: black;

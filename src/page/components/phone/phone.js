@@ -1,14 +1,12 @@
 import React from 'react';
-import PhoneHeader from 'components/phone/phone-header';
 
+import Screen from 'components/screen/screen';
 export default class Phone extends React.Component {
   render() {
     return (
       <div class='phone'>
         <div class='phone-notch'></div>
-        <div class='phone-inner'>
-          <PhoneHeader/>
-        </div>
+        <Screen/>
       </div>
     )
   }

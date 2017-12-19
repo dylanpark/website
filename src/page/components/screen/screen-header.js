@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class PhoneHeader extends React.Component {
+export default class ScreenHeader extends React.Component {
   componentWillMount() {
     this.setState({ 
       time: this._formatTime()
@@ -28,7 +28,7 @@ export default class PhoneHeader extends React.Component {
 
   render() {
     return (
-      <div class='phone-header'>
+      <div class='screen-header'>
           <span class='time'> {this.state.time} </span>
           <span class='status'> 
             <i class="fa fa-signal" aria-hidden="true"></i>
