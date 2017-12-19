@@ -3,13 +3,13 @@ import ReactDOM	from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from 'store';
-import App from 'app';
+import Main from 'main';
 
 import 'main.scss';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <Main/>
   </Provider>,
   document.getElementById('root')
 );

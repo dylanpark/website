@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from 'actions/action-creators';
 
-import Main from 'main';
+import Phone from 'components/phone/phone';
 
 function mapStateToProps(state) {
   return {
@@ -14,6 +14,6 @@ function mapDispatchToProps(dispatch){
   return bindActionCreators(actionCreators, dispatch);
 }
 
-const app = connect(mapStateToProps, mapDispatchToProps)(Main);
+const PhoneApp = connect(mapStateToProps, mapDispatchToProps)(Phone);
 
-export default app;
+export default PhoneApp;

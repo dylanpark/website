@@ -1,5 +1,7 @@
 import React from 'react';
 
+import * as apps from 'constants/app';
+
 export default class ScreenHeader extends React.Component {
   componentWillMount() {
     this.setState({ 
@@ -20,15 +22,17 @@ export default class ScreenHeader extends React.Component {
 
   _formatTime() {
     var date = new Date();
-    var time = date.getHours() === 12 ? 12 : date.getHours() % 12 + 
+    var time = (date.getHours() % 12 === 0 ? 12 : date.getHours() % 12) + 
                ':' + 
                ('0' + date.getMinutes()).slice(-2);
     return time;
   }
 
   render() {
+    const className = this.props.isApp ? 
+      'screen-header screen-app' : 'screen-header';
     return (
-      <div class='screen-header'>
+      <div class={className}>
           <span class='time'> {this.state.time} </span>
           <span class='status'> 
             <i class="fa fa-signal" aria-hidden="true"></i>

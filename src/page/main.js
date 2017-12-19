@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Phone from 'components/phone/phone';
+import PhoneApp from 'phone-app';
 
 export default class Main extends React.Component {
   render() {
     return (
-      <Phone appView={this.props.appView}/>
+      <PhoneApp/>
     );
   }
 }

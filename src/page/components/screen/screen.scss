@@ -1,9 +1,15 @@
+$imagePath: '/page/components/phone/wallpaper.jpg';
+
  .screen {
   width: 400px;
   height: 600px;
   border-radius: 8%;
-  background-image: url($imagePath);
+  background-color: whitesmoke;
   background-size: 100%; 
+
+  &-home {
+    background-image: url($imagePath);
+  }
 
   &-header {
     display: flex;
@@ -24,6 +30,10 @@
       }
 
     }
+  }
+
+  &-app {
+    color: black;
   }
 }
   

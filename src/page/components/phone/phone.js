@@ -6,7 +6,8 @@ export default class Phone extends React.Component {
     return (
       <div class='phone'>
         <div class='phone-notch'></div>
-        <Screen/>
+        <Screen app={this.props.app}
+                changeScreen={this.props.changeScreen}/>
       </div>
     )
   }

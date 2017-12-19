@@ -1,23 +1,19 @@
 .app-container {
-    margin: 20px 35px 0;
-    display: flex;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    height: 450px;
+  margin: 40px 35px 0;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  height: 435px;
 
-    .app {
-      width: 60px;
-      height: 60px;
-      border-radius: 10px;
-      margin-right: 30px;
-      background-color: grey;
-    }
-
-    div:nth-child(4n) {
+  .app {
+    margin-right: 30px;
+    
+    &:nth-child(4n) {
       margin-right: 0px;
     }
 
-    div:nth-child(n+5) {
+    &:nth-child(n+5) {
       margin-top: 25px;
     }
   }
+}

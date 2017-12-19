@@ -1,16 +1,8 @@
 import * as actions from 'constants/action';
 
-export function launchApp(data) {
+export function changeScreen(data) {
   return {
-    type: actions.launchApp,
-    appView: true,
+    type: actions.changeScreen,
     app: data.app
   };
-}
-
-export function launchHome(data) {
-  return {
-    type: actions.launchHome,
-    appView: false
-  }
 }

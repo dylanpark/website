@@ -1,14 +1,16 @@
 import * as actions from 'constants/action';
+import * as apps from 'constants/app';
 
 const initialState = {
-  appView: true
+  app: apps.home
 };
 
 function reducer(state=initialState, action) {
   switch (action.type) {
-    case actions.launchApp: {
+    case actions.changeScreen: {
       return {
-        ...state
+        ...state,
+        app: action.app
       };
     }
     default: {
