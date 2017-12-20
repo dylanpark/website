@@ -6,15 +6,6 @@ export default class AppContainer extends React.Component {
   render() {
     return (
       <div class='app-container'>
-        <App/>
-        <App/>
-        <App/>
-        <App/>
-        <App/>
-        <App/>
-        <App/>
-        <App/>
-        <App/>
       </div>
     );
   }

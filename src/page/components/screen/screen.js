@@ -5,6 +5,8 @@ import ScreenHeader from 'components/screen/screen-header';
 import AppContainer from 'components/app-container/app-container';
 import DockContainer from 'components/dock/dock-container';
 
+import MainSMS from 'components/sms/main-sms';
+
 export default class Screen extends React.Component {
   constructor() {
     super();
@@ -12,15 +14,16 @@ export default class Screen extends React.Component {
   }
 
   getScreen(app) {
+    const {...changeScreen} = this.props;
     switch(app) {
       case apps.sms: {
-        return <div></div>;
+        return <MainSMS {...changeScreen}/>;
       }
       default: {
         return (
           <div>
-            <AppContainer changeScreen={this.props.changeScreen}/>
-            <DockContainer changeScreen={this.props.changeScreen}/>
+            <AppContainer {...changeScreen}/>
+            <DockContainer {...changeScreen}/>
           </div>
         );
       }
@@ -28,6 +31,7 @@ export default class Screen extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     const screenView = this.getScreen(this.props.app);
     const isApp = this.props.app !== apps.home;
     const className = isApp ? 'screen' : 'screen screen-home';

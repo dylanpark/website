@@ -2,10 +2,10 @@ import * as actions from 'constants/action';
 import * as apps from 'constants/app';
 
 const initialState = {
-  app: apps.home
+  app: apps.sms
 };
 
-function reducer(state=initialState, action) {
+function screenReducer(state=initialState, action) {
   switch (action.type) {
     case actions.changeScreen: {
       return {
@@ -19,4 +19,4 @@ function reducer(state=initialState, action) {
   }
 }
 
-export default reducer;
+export default screenReducer;
