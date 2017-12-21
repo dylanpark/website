@@ -1,8 +1,8 @@
 import * as actions from 'constants/action';
 
-export function uploadMessage(data) {
+export function updateSMS(data) {
   return {
-    type: actions.uploadeMessage,
+    type: actions.updateSMS,
     message: data.message
   };
 }

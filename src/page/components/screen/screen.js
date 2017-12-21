@@ -17,7 +17,7 @@ export default class Screen extends React.Component {
     const {...changeScreen} = this.props;
     switch(app) {
       case apps.sms: {
-        return <MainSMS {...changeScreen}/>;
+        return <MainSMS/>;
       }
       default: {
         return (
@@ -31,7 +31,6 @@ export default class Screen extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const screenView = this.getScreen(this.props.app);
     const isApp = this.props.app !== apps.home;
     const className = isApp ? 'screen' : 'screen screen-home';

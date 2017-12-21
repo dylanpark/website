@@ -1,4 +1,5 @@
 $color-blue: #0084ff;
+$color-gray: lightgray;
 
 .view-sms {
 
@@ -47,9 +48,11 @@ $color-blue: #0084ff;
   }
   
   &-body {
+    display: flex;
+    flex-direction: column;
     height: 420px;
     background-color: white;
-    overflow-y: scroll;
+    overflow: auto;
   }
 
   &-input {
@@ -96,6 +99,28 @@ $color-blue: #0084ff;
       &:focus {
         outline: none;
       }
+    }
+  }
+
+  .message {
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 12px;
+    width: max-content;
+    max-width: 250px;
+    padding: 10px;
+    margin: 5px 15px;
+
+    &-dylan {
+      @extend .message;
+      background-color: $color-gray;
+    }
+
+    &-user {
+      @extend .message;
+      color: white;
+      background-color: $color-blue;
+      align-self: flex-end
     }
   }
 }

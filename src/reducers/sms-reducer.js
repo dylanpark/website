@@ -1,18 +1,14 @@
 import * as actions from 'constants/action';
 
-const initialState = {
-  messages: []
-}
+const initialState = [];
 
 function smsReducer(state=initialState, action) {
   switch (action.type) {
-    case actions.uploadeMessage: {
-      return {
-        messages: [
-          ...state.messages,
-          action.message
-        ]
-      }
+    case actions.updateSMS: {
+      return [
+        ...state,
+        action.message
+      ];
     }
     default: {
       return state;

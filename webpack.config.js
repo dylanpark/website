@@ -8,6 +8,9 @@ let extractCss = new ExtractTextPlugin('style.css');
 let generateHtml = new HtmlWebpackPlugin({ template: 'src/index.html' });
 
 module.exports = {
+  node: {
+    fs: 'empty'
+  },
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./src/index.js",
   output: {
