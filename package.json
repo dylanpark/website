@@ -45,7 +45,8 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot --port 8000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --env=prod --progress --profile --colors --bail"
   },
   "repository": {
     "type": "git",
