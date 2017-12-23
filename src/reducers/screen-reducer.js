@@ -1,8 +1,8 @@
 import * as actions from 'constants/action';
-import * as apps from 'constants/app';
+import apps from 'constants/app';
 
 const initialState = {
-  app: apps.sms
+  app: apps.home.name
 };
 
 function screenReducer(state=initialState, action) {

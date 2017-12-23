@@ -1,19 +1,16 @@
 import React from 'react';
 
-import * as apps from 'constants/app';
-import App from 'components/app/app';
+import apps from 'constants/app';
+import getApp from 'util/getApp';
 
 export default class DockContainer extends React.Component {
   render() {
-    const appNames = [apps.sms, apps.trifacta, apps.hitch, apps.traderev];
-    const appList = appNames.map(function(app, i) {
-      return <App key={i} app={app} changeScreen={this.props.changeScreen}/>
-    }.bind(this));
-
+    const appList = [apps.sms, apps.github, apps.trifacta, apps.traderev];
+    const appViews = getApp(appList, this.props.changeScreen);
     return (
       <div class='dock-container'>
         <div class='dock-container-inner'>
-          {appList}
+          {appViews}
         </div>
       </div>
     );

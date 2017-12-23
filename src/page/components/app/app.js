@@ -6,8 +6,10 @@ export default class App extends React.Component {
     this.launchApp = this.launchApp.bind(this);
   }
 
-  launchApp(app) {
-    if (app) {
+  launchApp(app, link) {
+    if (link) {
+      window.open(link, '_blank', false);
+    } else if (app) {
       this.props.changeScreen({
         app  
       });
@@ -15,10 +17,11 @@ export default class App extends React.Component {
   }
 
   render() {
-    const className = 'app ' + this.props.app;
+    const {app, link} = this.props;
+    const className = 'app ' + app;
     return (
       <div class={className} 
-           onClick={() => {this.launchApp(this.props.app)}}></div>
+           onClick={() => {this.launchApp(app, link)}}></div>
     );
   }
 }

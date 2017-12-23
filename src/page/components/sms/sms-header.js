@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as apps from 'constants/app';
+import apps from 'constants/app';
 
 export default class SMSHeader extends React.Component {
   constructor() {
@@ -10,7 +10,7 @@ export default class SMSHeader extends React.Component {
 
   launchHome() {
     this.props.changeScreen({
-      app: apps.home
+      app: apps.home.name
     });
   }
 

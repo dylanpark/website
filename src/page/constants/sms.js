@@ -1,4 +1,5 @@
 const what = '(what|whats|wht|wats|wat)';
+const why = '(why|whys|y)';
 const your = '(your|ur)';
 const are = '(are|r)';
 const you = '(you|u)';
@@ -20,8 +21,15 @@ const howAreYouQA = {
     `${how} is? it going?`,
     `${how} ${are} ${you}`
   ],
-  answer: ["I'm chillin", "Nothing much" , "Nothing"]
+  answer: ["I'm just chilling", "I'm doing fine"]
 };
+
+const whatsUpQA = {
+  questions: [
+    `${what} is? (up|good|poppin|popping|gucci|gud)`
+  ],
+  answer: ["Just chillin", "Nothing much"]
+}
 
 const ageQA = {
   questions: [
@@ -34,16 +42,18 @@ const ageQA = {
 const educationQA = {
   questions: [
     `${where} ${are}? ${you} ${study}`,
-    `${where} * ${school}`
+    `${where} * ${school}`,
+    `${what} is? ${your}? ${school}`,
+    `${what} is? ${your}? major`
   ],
-  answer: ["I'm studying computer enginnering at the university of waterloo"]
+  answer: ["I'm studying computer engineering at the University of Waterloo"]
 }
 
 const homeQA = {
   questions: [
     `${where} . ${you} ${live}`
   ],
-  answer: ["I live in waterloo, ontario, canada."]
+  answer: ["I live in Waterloo, Ontario, Canada"]
 }
 
 const jobQA = {
@@ -51,7 +61,7 @@ const jobQA = {
     `${where} . ${you}? ${work}`,
     `${what}? is? ${your} job`
   ],
-  answer: ["I work at trifacta as a software developer."]
+  answer: ["I work at trifacta as a software developer"]
 }
 
 const nameQA = {
@@ -59,12 +69,13 @@ const nameQA = {
     `${what}? is? ${your} name`,
     `who ${are}? ${you}`
   ],
-  answer: ["I'm Dylan Park.", "My name is Dylan Park."]
+  answer: ["I'm Dylan Park", "My name is Dylan Park"]
 }
 
 const smsMap = [
   greetQA,
   howAreYouQA,
+  whatsUpQA,
   ageQA,
   educationQA,
   homeQA,

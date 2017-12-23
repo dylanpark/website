@@ -10,16 +10,13 @@ export default class SMS extends React.Component {
     this.handleMessage = this.handleMessage.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     document.addEventListener('keydown', function(e) {
       let key = e.which || e.keyCode;
       if (key === 13) {
         this.handleMessage();
       }
     }.bind(this));
-  }
-
-  componentDidMount() {
     let smsBody = ReactDOM.findDOMNode(this).querySelector('.view-sms-body');
     smsBody.scrollTop = smsBody.scrollHeight;
   }
@@ -28,6 +25,9 @@ export default class SMS extends React.Component {
     let smsElement = ReactDOM.findDOMNode(this);
     let smsBody = smsElement.querySelector('.view-sms-body');
     let inputEl = smsElement.querySelector('input');
+    if (inputEl.value.trim() === '') {
+      return;
+    }
     this.props.updateSMS({message: {
       user: inputEl.value 
     }});
@@ -60,10 +60,10 @@ export default class SMS extends React.Component {
         <div class='view-sms-input'>
           <div class='view-sms-input-container'>
             <input type='text' placeholder='Message'></input>
-            <div class='view-sms-input-submit'>
+            <div class='view-sms-input-submit'
+                 onClick={this.handleMessage}>
               <i class='ion-arrow-up-c' 
-                 aria-hidden='true'
-                 onClick={this.handleMessage}></i> 
+                 aria-hidden='true'></i> 
             </div>
           </div>
         </div>

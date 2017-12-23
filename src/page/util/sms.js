@@ -6,7 +6,7 @@ const smsRespond = function(message) {
   let defaultReply = [
     "Sorry, I don't understand",
     "What?",
-    "Are u trying to say something?"
+    "Are you trying to say something?"
   ];
   let reply = {
     dylan: defaultReply[Math.floor(Math.random() * defaultReply.length)]
@@ -31,20 +31,3 @@ const smsRespond = function(message) {
 
 export default smsRespond;
 
-//age
-// what is your age?
-// how old are you?
-// 
-
-//location
-// where do you live?
-// where are you at?
-// where are you living?
-
-// work
-// where do you work?
-// what is your company?
-// what is your job?
-// where your job
-// where your company
-// 

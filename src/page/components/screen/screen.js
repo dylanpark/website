@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as apps from 'constants/app';
+import apps from 'constants/app';
 import ScreenHeader from 'components/screen/screen-header';
 import AppContainer from 'components/app-container/app-container';
 import DockContainer from 'components/dock/dock-container';
@@ -16,9 +16,11 @@ export default class Screen extends React.Component {
   getScreen(app) {
     const {...changeScreen} = this.props;
     switch(app) {
-      case apps.sms: {
+      case apps.sms.name: {
         return <MainSMS/>;
       }
+      case apps.trifacta.name:
+      case apps.traderev.name:
       default: {
         return (
           <div>
@@ -32,11 +34,9 @@ export default class Screen extends React.Component {
 
   render() {
     const screenView = this.getScreen(this.props.app);
-    const isApp = this.props.app !== apps.home;
-    const className = isApp ? 'screen' : 'screen screen-home';
     return (
-      <div class={className}>
-        <ScreenHeader isApp={isApp}/>
+      <div class={'screen-' + this.props.app}>
+        <ScreenHeader/>
         {screenView}
       </div>
     );

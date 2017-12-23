@@ -1,7 +1,5 @@
 import React from 'react';
 
-import * as apps from 'constants/app';
-
 export default class ScreenHeader extends React.Component {
   componentWillMount() {
     this.setState({ 
@@ -29,10 +27,8 @@ export default class ScreenHeader extends React.Component {
   }
 
   render() {
-    const className = this.props.isApp ? 
-      'screen-header screen-app' : 'screen-header';
     return (
-      <div class={className}>
+      <div class='screen-header'>
           <span class='time'> {this.state.time} </span>
           <span class='status'> 
             <i class="fa fa-signal" aria-hidden="true"></i>

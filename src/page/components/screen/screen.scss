@@ -1,14 +1,38 @@
-$imagePath: '/page/components/phone/wallpaper.jpg';
+$imagePath: '/page/image/wallpaper.jpg';
+$colorGreen: #9acd32;
 
- .screen {
+.screen {
   width: 400px;
   height: 600px;
   border-radius: 8%;
-  background-color: whitesmoke;
   background-size: 100%; 
 
   &-home {
+    @extend .screen;
     background-image: url($imagePath);
+  }
+
+  &-sms {
+    @extend .screen;
+    background-color: whitesmoke;
+
+    .screen-header {
+      color: black;
+    }
+  }
+
+  &-traderev {
+    @extend .screen;
+    background-color: $colorGreen;
+
+    .screen-header {
+      color: black;
+    }
+  }
+
+  &-trifacta {
+    @extend .screen;
+    background-color: white;
   }
 
   &-header {
@@ -19,6 +43,7 @@ $imagePath: '/page/components/phone/wallpaper.jpg';
 
     .time {
       margin: 18px 0 0;
+      user-select: none;
     }
 
     .status {

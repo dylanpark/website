@@ -1,5 +1,24 @@
-export const home = 'home';
-export const sms = 'sms';
-export const hitch = 'hitch';
-export const trifacta = 'trifacta';
-export const traderev = 'traderev';
+const apps = {
+  home: {
+    name: 'home'
+  },
+  sms: {
+    name: 'sms'
+  },
+  trifacta: {
+    name: 'trifacta'
+  },
+  traderev: {
+    name: 'traderev'
+  },
+  github: {
+    name: 'github',
+    link: 'https://github.com/dylanpark/'
+  },
+  instagram: {
+    name: 'instagram',
+    link: 'https://www.instagram.com/dylanpark98/'
+  }
+}
+
+export default apps;
